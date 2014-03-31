@@ -1,0 +1,97 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="msapplication-tap-highlight" content="no" />
+
+	<title>Bamboo.js</title>
+
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bamboo.css">
+    <link href="thrColLiqHdr.css" rel="stylesheet" type="text/css" /><!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
+ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */
+</style>
+<![endif]-->
+
+</head>
+
+<body>
+
+
+	<nav id="main-nav" class="navigation overflow">
+		<ul>
+			<li><a href="#">Menu item</a></li>
+			<li><a href="#">Menu item 2</a></li>
+			<li><a href="#">Menu item 3</a></li>
+			<li><a href="#">Menu item 4</a></li>
+			<li><a href="#">Menu item 5</a></li>
+			<li><a href="#">Menu item 6</a></li>
+		</ul>
+	</nav>
+
+	<div id="container">
+
+		<header class="primary">
+			<span class="open icon">&#9776;</span>
+			<hgroup><h1>Title</h1></hgroup>
+		</header>
+
+		<section id="scroller" class="overflow">
+			<div id="content">
+
+				<!-- Content goes in here -->
+
+				 <div class="content">
+    <h1><a name="top">Instructions</a></h1>
+    <p>Be aware that the CSS for these layouts is heavily commented. If you do most of your work in Design view, have a peek at the code to get tips on working with the CSS for the liquid layouts. You can remove these comments before you launch your site. To learn more about the techniques used in these CSS Layouts, read this article at Adobe's Developer Center - <a href="http://www.adobe.com/go/adc_css_layouts">http://www.adobe.com/go/adc_css_layouts</a>.</p>
+    <h2>Clearing Method</h2>
+    
+    <p>Because all the columns are floated, this layout uses a clear:both declaration in the .footer rule.
+    <img src="http://reportingfromthebattlefield.files.wordpress.com/2011/04/war-photo1.jpg" alt="War Photo 1" width="50%" align="left" />This clearing technique forces the .container to understand where the columns end in order to show any borders or background colors you place on the .container. If your design requires you to remove the .footer from the .container, you'll need to use a different clearing method. The most reliable will be to add a &lt;br class=&quot;clearfloat&quot; /&gt; or &lt;div  class=&quot;clearfloat&quot;&gt;&lt;/div&gt; after your final floated column (but before the .container closes). This will have the same clearing effect.</p>
+    <h3>Logo Replacement</h3>
+    <p>An image placeholder was used in this layout in the .header where you'll likely want to place  a logo. It is recommended that you remove the placeholder and replace it with your own linked logo. </p><iframe width="420" height="315" src="//www.youtube.com/embed/xNUDwA4SvYo" frameborder="0" allowfullscreen align="right"></iframe>
+    <p> Be aware that if you use the Property inspector to navigate to your logo image using the SRC field (instead of removing and replacing the placeholder), you should remove the inline background and display properties. These inline styles are only used to make the logo placeholder show up in browsers for demonstration purposes. </p>
+    <p>To remove the inline styles, make sure your CSS Styles panel is set to Current. Select the image, and in the Properties pane of the CSS Styles panel, right click and delete the display and background properties. (Of course, you can always go directly into the code and delete the inline styles from the image or placeholder there.)</p>
+    <h4><a name="page2">Internet Explorer Conditional Comments</a></h4>
+    <p>These liquid layouts contain an Internet Explorer Conditional Comment (IECC) to correct two issues. </p>
+    <ol>
+      <li>Browsers are inconsistent in the way they round div sizes in percent-based layouts. If the browser must render a number like 144.5px or 564.5px, they have to round it to the nearest whole number. <ul class="enlarge"><li><img src="https://dl.dropboxusercontent.com/u/7043785/umsl/images/vietnam010-L.jpg" width="150px" height="100px" alt="Blackpool pier" /><span><img src="https://dl.dropboxusercontent.com/u/7043785/umsl/images/vietnam010-L.jpg" alt="Blackpool pier" />The sun breaks through the dense jungle foliage around the embattled town of Binh Gia, 40 miles east of Saigon, in early January 1965, as South Vietnamese troops, joined by U.S. advisors, rest after a cold, damp and tense night of waiting in an ambush position for a Viet Cong attack that didn't come. One hour later, as the possibility of an overnight attack by the Viet Cong diasappeared, the troops moved out for another long, hot day hunting the elusive communist guerrillas in the jungles. (AP Photo/Horst Faas)</span></li><li><img src="http://reportingfromthebattlefield.files.wordpress.com/2011/04/war-photo1.jpg" width="150px" height="100px" alt="Dechairs" /><span><img src="http://reportingfromthebattlefield.files.wordpress.com/2011/04/war-photo1.jpg" alt="Deckchairs" /><br />Deckchairs on Blackpool beach</span></li></ul>Safari and Opera round down, Internet Explorer rounds up and Firefox rounds one column up and one down filling the container completely. These rounding issues can cause inconsistencies in some layouts. In this IECC there is a 1px negative margin to fix IE. You may move it to any of the columns (and on either the left or right) to suit your layout needs.</li>
+      <li>The zoom property was added to the anchor within the navigation list since, in some cases, extra white space will be rendered in IE6 and IE7. Zoom gives IE its proprietary hasLayout property to fix this issue.</li>
+    </ol>
+    <ul class="enlarge">
+<li><img src="http://reportingfromthebattlefield.files.wordpress.com/2011/04/war-photo1.jpg" width="150px" height="100px" alt="Dechairs" /><span><img src="http://reportingfromthebattlefield.files.wordpress.com/2011/04/war-photo1.jpg" alt="Deckchairs" /><br />Deckchairs on Blackpool beach</span></li>
+<li><img src="assets/image-enlarge02-sml.jpg" width="150px" height="100px" alt="Blackpool sunset" /><span><img src="assets/image-enlarge02.jpg" alt="Blackpool sunset" /><br />Sunset over the Irish Sea at Blackpool</span></li>
+<li><img src="https://dl.dropboxusercontent.com/u/7043785/umsl/images/vietnam010-L.jpg" width="150px" height="100px" alt="Blackpool pier" /><span><img src="https://dl.dropboxusercontent.com/u/7043785/umsl/images/vietnam010-L.jpg" height="300" alt="Blackpool pier" /><br />The sun breaks through the dense jungle foliage around the embattled town of Binh Gia, 40 miles east of Saigon, in early January 1965, as South Vietnamese troops, joined by U.S. advisors, rest after a cold, damp and tense night of waiting in an ambush position for a Viet Cong attack that didn't come. One hour later, as the possibility of an overnight attack by the Viet Cong diasappheared, the troops moved out for another long, hot day hunting the elusive communist guerrillas in the jungles. (AP Photo/Horst Faas)</span></li>
+</ul>
+
+    <!-- end .content --></div>
+
+				<!-- Content ends -->
+
+			</div>
+		</section>
+
+	</div>
+
+	<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+	<script src="js/bamboo.0.1.js"></script>
+
+	<script>
+		var site = new Bamboo();
+	</script>
+
+</body>
+
+</html>	
